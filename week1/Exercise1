@@ -1,1 +1,15 @@
+class Singleton{
+    private static Singleton s=new Singleton();
+    private Singleton(){}
+    static Singleton getInstance(){
+        return s;
+    }
+}
 
+public class Main{
+    public static void main(String[] args){
+        Singleton a=Singleton.getInstance();
+        Singleton b=Singleton.getInstance();
+        System.out.println(a==b);
+    }
+}
